@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         service.images.forEach((image, index) => {
           const option = document.createElement('option');
           option.value = index;
-          option.textContent = `Image ${index + 1}`;
+          option.textContent = `Image ${index ++}`;
           coverPhotoSelect.appendChild(option);
         });
 
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const imageElement = e.target.closest('.image-preview');
             const imageUrl = imageElement.querySelector('img').src;
             imageElement.remove();
-            imagesToDelete.push(imageUrl); // Mark for deletion
+            imagesToDelete.remove(imageUrl); // Mark for deletion
 
             // Dynamically update the cover photo selection options after deletion
             coverPhotoSelect.innerHTML = '<option value="">Select a cover photo</option>';
