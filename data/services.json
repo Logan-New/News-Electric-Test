@@ -1,0 +1,22 @@
+{
+  "services": [
+    {
+      "id": "1733016663276",
+      "name": "Whole Home Generator Install",
+      "description": "Your trusted local electrical service provider, specializing in whole-home generator installations. We ensure your home stays powered during outages with reliable, professional service tailored to meet your needs. Serving our small-town community with pride, we deliver quality workmanship and peace of mind you can count on.",
+      "images": []
+    },
+    {
+      "id": "1733016663277",
+      "name": "New Construction Electrical Services",
+      "description": "Build your future with power you can trust! At New's Electric LLC, we specialize in electrical installations for new construction projects. Whether it’s a residential, commercial, or industrial build, our team works closely with you to design and install systems that meet your needs and exceed expectations. Our services include comprehensive electrical design, reliable installations, and strict adherence to safety standards.",
+      "images": []
+    },
+    {
+      "id": "1733016663278",
+      "name": "Remodels & Electrical Upgrades",
+      "description": "Transform your space with modern electrical solutions! Revitalize your home or business with New's Electric LLC. Our expert team upgrades outdated systems or adds new features to match your vision. From rewiring to smart systems and modern lighting installations, we ensure safety, efficiency, and enhanced performance tailored to your remodel.",
+      "images": []
+    }
+  ]
+}

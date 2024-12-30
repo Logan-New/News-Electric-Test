@@ -1,0 +1,302 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, ol, a, input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Cinzel', serif; /* Classic font style */
+  font-size: 16px;
+  line-height: 1.6;
+  color: #002244; /* Navy Blue for text color */
+  background-color: #F9F9F9; /* Light gray background for contrast */
+  height: 100%; /* Ensure the body takes full height */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Header */
+header {
+  background: #002244; /* Navy Blue */
+  color: #FFFFFF; /* White text */
+  padding: 20px 40px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 #CCCCCC; /* Subtle shadow effect */
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  font-family: 'Cinzel', serif;
+  color: #FFFFFF; /* White text */
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #FFCC00; /* Accent Yellow */
+  color: #002244; /* Navy Blue */
+  outline: none;
+}
+
+/* Main Content */
+main {
+  flex: 1; /* Pushes the footer to the bottom */
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  background: #002244; /* Navy Blue */
+  color: #FFFFFF; /* White text */
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: auto; /* Keeps footer at the bottom */
+}
+
+footer a {
+  font-family: 'Cinzel', serif;
+  color: #FFCC00; /* Accent Yellow */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #FFFFFF; /* White text on hover */
+  text-decoration: underline;
+}
+
+/* Service Items */
+.service-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #FFFFFF; /* White background */
+  border: 1px solid #E0E0E0; /* Light gray border */
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Clean shadow */
+}
+
+.service-item img {
+  max-width: 150px;
+  max-height: 150px;
+  margin-right: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #CCCCCC; /* Subtle border */
+}
+
+.service-item h3 {
+  font-size: 1.8rem;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #002244; /* Navy Blue text */
+  margin-bottom: 10px;
+}
+
+/* Forms */
+form {
+  background: #FFFFFF; /* White background */
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Modern shadow */
+  border: 1px solid #E0E0E0; /* Light gray border */
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333333; /* Dark gray text */
+}
+
+form input, form textarea, form select, form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #CCCCCC; /* Light gray border */
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+  border-color: #002244; /* Navy Blue border on focus */
+  outline: none;
+}
+
+form button {
+  background: #002244; /* Navy Blue */
+  color: #FFFFFF; /* White text */
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #FFCC00; /* Accent Yellow */
+  color: #002244; /* Navy Blue text */
+}
+
+/* Top-right image */
+#top-right-image-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Keep it above most elements */
+  background: rgba(255, 255, 255, 0.9); /* Light, semi-transparent background */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Clean shadow for depth */
+  border: 1px solid #E0E0E0; /* Light gray border */
+}
+
+#top-right-image {
+  width: 280px; /* Default size for larger screens */
+  height: auto;
+  border: none; /* Remove border for cleaner look */
+  border-radius: 4px; /* Slight rounding */
+}
+
+/* Ensure navigation links have a higher stacking order */
+nav a {
+  position: relative;
+  z-index: 2000; /* Higher than #top-right-image-container */
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+  #top-right-image-container {
+    top: auto; /* Reposition below header */
+    right: auto;
+    bottom: 20px; /* Place at the bottom */
+    left: 20px;
+    width: 80%; /* Adjust width to fit smaller screens */
+    padding: 10px; /* Reduce padding */
+    z-index: 100; /* Lower priority */
+  }
+
+  #top-right-image {
+    width: 100%; /* Scale to fit the new container */
+  }
+}
+/* Business card image in the footer */
+#business-card {
+  width: 380px; /* Adjust size */
+  height: auto;
+  margin-top: 20px;
+  padding: 10px;
+  background: #FFFFFF; /* Clean white background */
+  border: 1px solid #E0E0E0; /* Light gray border */
+  border-radius: 8px; /* Subtle rounding */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Clean and soft shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-item img {
+    margin: 0 auto 15px;
+  }
+
+  header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden; /* Hidden by default */
+  opacity: 0; /* Fully transparent */
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.modal.show {
+  visibility: visible; /* Make it visible */
+  opacity: 1; /* Fully opaque */
+}
+
+.modal-content {
+  background: #FFFFFF; /* White background */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+.bold-text {
+  font-weight: bold;
+}

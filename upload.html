@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin Panel - Manage Services for New's Electric LLC. Add, update, or delete services.">
+  <meta name="keywords" content="admin panel, manage services, New's Electric, electrical services">
+  <meta name="author" content="New's Electric LLC">
+  <title>Admin Panel - Manage Services</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .image-preview-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .image-preview {
+      position: relative;
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .image-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-preview button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    .image-preview button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Admin Panel - New's Electric LLC</h1>
+    <nav aria-label="Admin navigation">
+      <a href="/index" class="nav-link" aria-label="Home">Home</a>
+      <a href="/about" class="nav-link" aria-label="About Us">About</a>
+      <a href="/services" class="nav-link" aria-label="View Services">Services</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="feedback" class="hidden">
+      <p id="feedback-message"></p>
+    </section>
+
+    <form id="manage-service-form" aria-labelledby="manage-service-form">
+      <label for="service-id">Select Service to Update (or leave blank to add a new service):</label>
+      <select id="service-id" name="service-id" aria-label="Select service">
+        <option value="">Add New Service</option>
+      </select>
+
+      <label for="name">Service Name:</label>
+      <input type="text" id="name" name="name" required aria-required="true" aria-label="Service name">
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" required aria-required="true" aria-label="Service description"></textarea>
+
+      <label for="images">Select Images (up to 40 images, JPG, PNG, GIF):</label>
+      <input type="file" id="images" name="images" accept=".jpg,.jpeg,.png,.gif" multiple aria-label="Upload service images">
+      <div id="image-preview-container" class="image-preview-container" aria-live="polite"></div>
+
+      <label for="cover-photo">Select Cover Photo:</label>
+      <select id="cover-photo" name="cover-photo" aria-label="Select cover photo">
+        <option value="">Select a cover photo</option>
+      </select>
+
+      <button type="submit">Save Service</button>
+    </form>
+
+    <button id="delete-service" class="return-button" aria-label="Delete selected service">Delete Selected Service</button>
+    <button id="return-home" class="return-button" aria-label="Return to homepage">Return to Homepage</button>
+  </main>
+
+ <!-- Footer -->
+ <footer aria-label="Footer">
+  <p>&copy; 2024 New's Electric LLC</p>
+  <a href="#" id="admin-link" aria-label="Admin Login">Admin</a>
+  <p>Christ is King</p>
+</footer>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
