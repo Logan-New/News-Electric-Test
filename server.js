@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Updated CORS configuration
 app.use(cors({
-  origin: ['https://www.newselectric.com', 'https://logan-new.github.io'], // Allowed origins
+  origin: ['https://news-electric-1.onrender.com'], // Allowed Render domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
 }));
 
@@ -48,7 +48,7 @@ app.use(express.static(__dirname));
 app.use((req, res, next) => {
   res.setHeader(
     'Content-Security-Policy',
-    "default-src 'self'; connect-src 'self' https://news-electric.onrender.com; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
+    "default-src 'self'; connect-src 'self' https://news-electric-1.onrender.com; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
   );
   next();
 });
@@ -107,9 +107,8 @@ const upload = multer({
 });
 
 // Routes for serving HTML pages
-app.use(express.static(__dirname));
 app.get('/index', (req, res) => {
-  console.log('GET request to /');
+  console.log('GET request to /index');
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 app.get('/about', (req, res) => {
